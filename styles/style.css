@@ -1,0 +1,178 @@
+/* Shared css */
+html {
+  box-sizing: border-box;
+  /* font-size: 80%; */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+}
+
+body {
+  /* background: url(../images/image9.png); */
+  display: flex;
+  flex-flow: column wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* display: inline-block; */
+}
+
+/* end of shared css */
+
+/* Header css */
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+nav {
+  /* overflow: hidden; */
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav a {
+  border: 1px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  height: auto;
+  transition-property: border;
+  transition-property: box-shadow;
+}
+
+nav a:hover {
+  color: green;
+  border: none;
+}
+
+nav a:active {
+  color: green;
+  border: none;
+  box-shadow: none;
+}
+
+/* header css end */
+
+/* main css */
+main {
+  margin: 30vh 3vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.home-main {
+  margin: 30vh 3vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-main h1::before {
+  content: "";
+  color: green;
+  font-size: 2em;
+  animation: opening-tags 10s both step-start infinite;
+}
+@keyframes opening-tags {
+  0% {
+    content: "{";
+  }
+  25% {
+    content: "<";
+  }
+  50% {
+    content: "(";
+  }
+  75% {
+    content: "//";
+  }
+  100% {
+    content: "{";
+  }
+}
+
+.home-main h1::after {
+  content: "";
+  color: green;
+  font-size: 2em;
+  animation: closing-tags 10s both step-start infinite;
+}
+@keyframes closing-tags {
+  0% {
+    content: "}";
+  }
+  25% {
+    content: ">";
+  }
+  50% {
+    content: ")";
+  }
+  75% {
+    content: "//";
+  }
+  100% {
+    content: "}";
+  }
+}
+
+.profile-img {
+  padding: 0 2em 2em;
+  max-width: 20%;
+  height: auto;
+  float: left;
+  transition-property: max-width;
+}
+
+.profile-img:hover {
+  max-width: 25%;
+  height: auto;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slider div {
+  border: 1px solid;
+  max-width: 200px;
+  box-shadow: ;
+}
+
+.slider div img {
+  max-width: 200px;
+  box-shadow: ;
+}
+/* main css end */
+
+/* footer css */
+footer a img {
+  width: 15px;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/* footer css end */
